@@ -1,13 +1,13 @@
 # HastaKalaShop
 
-HastaKalaShop is a modern Android application designed for showcasing and selling handcrafted products. The app features a premium "Royal Midnight" aesthetic with deep blue tones and traditional mandala art elements.
+HastaKala is a feature-rich Android application designed for showcasing and selling handcrafted products. It features a modern, customizable UI along with robust shop management tools.
 
 ## Features
 
 - **Product Catalog**: Browse through a curated selection of handcrafted items.
 - **Quick Billing**: Efficient checkout process with a specialized billing system.
 - **Dashboard**: Overview of shop activities and sales.
-- **Premium UI**: Dark-themed design with smooth animations and high-quality visuals.
+- **Modern UI**: Smooth animations and a user-friendly interface designed for an enhanced shopping experience.
 
 ## Tech Stack
 
