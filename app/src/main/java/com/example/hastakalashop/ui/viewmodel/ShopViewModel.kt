@@ -47,9 +47,20 @@ class ShopViewModel(application: Application) : AndroidViewModel(application) {
             val bill = BillRecord(
                 date = System.currentTimeMillis(),
                 totalAmount = totalAmount,
-                itemsSold = itemsSold
+                itemsSold = itemsSold,
+                productId = productId,
+                quantity = quantity
             )
             repository.insertBill(bill)
         }
+    }
+
+    fun deleteBill(bill: BillRecord) = viewModelScope.launch {
+        val product = repository.getProductById(bill.productId)
+        if (product != null) {
+            val updatedProduct = product.copy(stockQuantity = product.stockQuantity + bill.quantity)
+            repository.updateProduct(updatedProduct)
+        }
+        repository.deleteBill(bill)
     }
 }

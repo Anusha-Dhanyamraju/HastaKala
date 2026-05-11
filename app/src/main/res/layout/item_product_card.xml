@@ -59,9 +59,10 @@
                 android:lineSpacingMultiplier="1.05" />
 
             <TextView
+                android:id="@+id/product_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="₹ 450"
+                android:text="₹ 0"
                 android:textColor="@color/text_primary"
                 android:textStyle="bold"
                 android:textSize="13sp"

@@ -16,4 +16,7 @@ interface BillDao {
 
     @Query("SELECT SUM(totalAmount) FROM bills")
     fun getTotalRevenue(): Flow<Double?>
+
+    @androidx.room.Delete
+    suspend fun deleteBill(bill: BillRecord)
 }

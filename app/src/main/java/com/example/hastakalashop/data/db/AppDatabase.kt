@@ -14,7 +14,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-@Database(entities = [Product::class, BillRecord::class], version = 1, exportSchema = false)
+@Database(entities = [Product::class, BillRecord::class], version = 3, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun productDao(): ProductDao
     abstract fun billDao(): BillDao
@@ -34,24 +34,32 @@ abstract class AppDatabase : RoomDatabase() {
                 .addCallback(object : RoomDatabase.Callback() {
                     override fun onCreate(db: SupportSQLiteDatabase) {
                         super.onCreate(db)
-                        // Pre-populate database with some dummy data
-                        CoroutineScope(Dispatchers.IO).launch {
-                            val dao = getDatabase(context).productDao()
-                            val products = listOf(
-                                Product(name = "Kalamkari Saree", price = 2500.0, stockQuantity = 12, category = "Clothing", variant = "Red/Black", imageResId = R.drawable.img_bag),
-                                Product(name = "Terracotta Pot", price = 450.0, stockQuantity = 3, category = "Home Decor", variant = "Large", imageResId = R.drawable.img_keychain),
-                                Product(name = "Handloom Kurta", price = 1200.0, stockQuantity = 2, category = "Clothing", variant = "Indigo", imageResId = R.drawable.img_wall),
-                                Product(name = "Brass Lamp", price = 3500.0, stockQuantity = 8, category = "Home Decor", variant = "Antique", imageResId = R.drawable.img_coasters),
-                                Product(name = "Banana Fiber Bag", price = 600.0, stockQuantity = 1, category = "Accessories", variant = "Natural", imageResId = R.drawable.img_bag),
-                                Product(name = "Madhubani Painting", price = 4200.0, stockQuantity = 4, category = "Art", variant = "Framed", imageResId = R.drawable.img_wall)
-                            )
-                            products.forEach { dao.insertProduct(it) }
-                        }
+                        prepopulate(context)
+                    }
+
+                    override fun onDestructiveMigration(db: SupportSQLiteDatabase) {
+                        super.onDestructiveMigration(db)
+                        prepopulate(context)
                     }
                 })
                 .build()
                 INSTANCE = instance
                 instance
+            }
+        }
+
+        private fun prepopulate(context: Context) {
+            CoroutineScope(Dispatchers.IO).launch {
+                val dao = getDatabase(context).productDao()
+                val products = listOf(
+                    Product(name = "Kalamkari Saree", price = 2500.0, stockQuantity = 12, category = "Clothing", variant = "Red/Black", imageResId = R.drawable.img_bag),
+                    Product(name = "Terracotta Pot", price = 450.0, stockQuantity = 3, category = "Home Decor", variant = "Large", imageResId = R.drawable.img_keychain),
+                    Product(name = "Handloom Kurta", price = 1200.0, stockQuantity = 2, category = "Clothing", variant = "Indigo", imageResId = R.drawable.img_wall),
+                    Product(name = "Brass Lamp", price = 3500.0, stockQuantity = 8, category = "Home Decor", variant = "Antique", imageResId = R.drawable.img_coasters),
+                    Product(name = "Banana Fiber Bag", price = 600.0, stockQuantity = 1, category = "Accessories", variant = "Natural", imageResId = R.drawable.img_bag),
+                    Product(name = "Madhubani Painting", price = 4200.0, stockQuantity = 4, category = "Art", variant = "Framed", imageResId = R.drawable.img_wall)
+                )
+                products.forEach { dao.insertProduct(it) }
             }
         }
     }

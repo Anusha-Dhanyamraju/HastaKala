@@ -29,4 +29,8 @@ class ShopRepository(private val productDao: ProductDao, private val billDao: Bi
     suspend fun insertBill(bill: BillRecord) {
         billDao.insertBill(bill)
     }
+
+    suspend fun deleteBill(bill: BillRecord) {
+        billDao.deleteBill(bill)
+    }
 }

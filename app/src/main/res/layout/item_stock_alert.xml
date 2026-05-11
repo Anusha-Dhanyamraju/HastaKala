@@ -76,5 +76,17 @@
                 android:textStyle="bold" />
         </com.google.android.material.card.MaterialCardView>
 
+        <ImageButton
+            android:id="@+id/btn_add_stock"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@android:drawable/ic_input_add"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/accent_simple"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@id/iv_warning"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

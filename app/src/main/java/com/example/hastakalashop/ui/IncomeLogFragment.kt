@@ -33,7 +33,9 @@ class IncomeLogFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
-        val adapter = IncomeAdapter()
+        val adapter = IncomeAdapter { bill ->
+            viewModel.deleteBill(bill)
+        }
         binding.recyclerIncomeLog.adapter = adapter
         
         viewModel.allBills.observe(viewLifecycleOwner) { bills ->
@@ -51,7 +53,7 @@ class IncomeLogFragment : Fragment() {
     }
 }
 
-class IncomeAdapter : RecyclerView.Adapter<IncomeAdapter.ViewHolder>() {
+class IncomeAdapter(private val onDeleteClick: (BillRecord) -> Unit) : RecyclerView.Adapter<IncomeAdapter.ViewHolder>() {
     
     private var items: List<BillRecord> = emptyList()
     private val dateFormat = SimpleDateFormat("dd MMM yyyy, HH:mm", Locale.getDefault())
@@ -72,6 +74,9 @@ class IncomeAdapter : RecyclerView.Adapter<IncomeAdapter.ViewHolder>() {
         holder.binding.tvLogDate.text = dateFormat.format(Date(item.date))
         holder.binding.tvLogItem.text = item.itemsSold
         holder.binding.tvLogTotal.text = "₹ ${item.totalAmount}"
+        holder.binding.btnDeleteLog.setOnClickListener {
+            onDeleteClick(item)
+        }
     }
 
     override fun getItemCount() = items.size

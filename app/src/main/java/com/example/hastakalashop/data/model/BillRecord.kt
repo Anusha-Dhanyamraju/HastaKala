@@ -9,5 +9,7 @@ data class BillRecord(
     val id: Int = 0,
     val date: Long,
     val totalAmount: Double,
-    val itemsSold: String // We will store items as a comma separated string for simplicity, or JSON.
+    val itemsSold: String,
+    val productId: Int,
+    val quantity: Int
 )

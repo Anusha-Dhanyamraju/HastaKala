@@ -37,6 +37,10 @@ class QuickBillFragment : Fragment() {
         setupRecyclerView()
         setupQuantityPicker()
         
+        binding.btnCloseSelection.setOnClickListener {
+            resetSelection()
+        }
+        
         binding.btnSaveSale.setOnClickListener {
             val product = selectedProduct
             val priceStr = binding.etPrice.text.toString()
@@ -131,6 +135,7 @@ class ProductAdapter(private val onClick: (Product) -> Unit) : RecyclerView.Adap
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val product = items[position]
         holder.binding.productName.text = product.name
+        holder.binding.productPrice.text = "₹ ${product.price}"
         holder.binding.productIcon.setImageResource(product.imageResId)
         holder.binding.root.setOnClickListener {
             onClick(product)

@@ -53,7 +53,15 @@
             android:textAppearance="?attr/textAppearanceTitleMedium"
             android:textColor="@color/text_primary"
             android:textStyle="bold"
-            android:paddingStart="12dp" />
+            android:paddingHorizontal="12dp" />
+
+        <ImageButton
+            android:id="@+id/btn_delete_log"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_menu_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/stock_critical" />
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>
