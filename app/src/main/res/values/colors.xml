@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_dark">#121212</color>
+    <color name="surface_dark">#1E1E1E</color>
+    <color name="surface_variant">#2C2C2C</color>
+    
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B3B3B3</color>
+    <color name="text_tertiary">#808080</color>
+
+    <color name="accent_simple">#8AB4F8</color>
+    <color name="gold_antique">#D4AF37</color>
+    <color name="nav_icon_unselected">#808080</color>
+    <color name="peacock_teal">#006D77</color>
+    <color name="divider_color">#333333</color>
+
+    <!-- Material 3 mapping -->
+    <color name="primary">@color/accent_simple</color>
+    <color name="onPrimary">#121212</color>
+    <color name="primaryContainer">#2C2C2C</color>
+    <color name="onPrimaryContainer">#8AB4F8</color>
+
+    <color name="secondary">#E8EAED</color>
+    <color name="onSecondary">#121212</color>
+
+    <color name="background">@color/bg_dark</color>
+    <color name="onBackground">@color/text_primary</color>
+    <color name="surface">@color/surface_dark</color>
+    <color name="onSurface">@color/text_primary</color>
+    <color name="surfaceVariant">@color/surface_variant</color>
+    <color name="onSurfaceVariant">@color/text_secondary</color>
+
+    <color name="outline">@color/divider_color</color>
+    <color name="outline_variant">#444444</color>
+
+    <!-- Stock specific colors -->
+    <color name="stock_low">#F29900</color>
+    <color name="stock_critical">#EA4335</color>
+    <color name="stock_high">#34A853</color>
+
+    <!-- Chart palette -->
+    <color name="chart_color_1">#8AB4F8</color>
+    <color name="chart_color_2">#34A853</color>
+    <color name="chart_color_3">#F29900</color>
+    <color name="chart_color_other">#5F6368</color>
+</resources>

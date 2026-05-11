@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_quick_bill">
+
+    <fragment
+        android:id="@+id/navigation_quick_bill"
+        android:name="com.example.hastakalashop.ui.QuickBillFragment"
+        android:label="Quick Bill"
+        tools:layout="@layout/fragment_quick_bill" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.hastakalashop.ui.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_stock_alert"
+        android:name="com.example.hastakalashop.ui.StockAlertFragment"
+        android:label="Stock Alert"
+        tools:layout="@layout/fragment_stock_alert" />
+
+    <fragment
+        android:id="@+id/navigation_income_log"
+        android:name="com.example.hastakalashop.ui.IncomeLogFragment"
+        android:label="Income Log"
+        tools:layout="@layout/fragment_income_log" />
+</navigation>

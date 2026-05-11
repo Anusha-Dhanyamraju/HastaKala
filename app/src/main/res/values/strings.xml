@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">HastaKalaShop</string>
+    <string name="nav_quick_bill">Bill</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_alerts">Alerts</string>
+    <string name="nav_income">Income</string>
+    <string name="quick_bill_tagline">Hasta Kala — colours, craft, and chaos (the good kind).</string>
+    <string name="quick_bill_hint">Tap a product and celebrate another sale.</string>
+    <string name="dashboard_subtitle">Spot what is selling and what needs love.</string>
+    <string name="stock_subtitle">These friends are running low — time to restock.</string>
+    <string name="income_header_subtitle">Every rupee you earned, lined up nice and neat.</string>
+</resources>
