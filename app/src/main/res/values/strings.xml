@@ -9,4 +9,16 @@
     <string name="dashboard_subtitle">Spot what is selling and what needs love.</string>
     <string name="stock_subtitle">These friends are running low — time to restock.</string>
     <string name="income_header_subtitle">Every rupee you earned, lined up nice and neat.</string>
+    
+    <!-- Add Product Dialog -->
+    <string name="add_product_title">New Product</string>
+    <string name="add_product_subtitle">Add a beautiful new craft to your collection.</string>
+    <string name="hint_product_name">Product Name</string>
+    <string name="hint_price">Price (₹)</string>
+    <string name="hint_stock">Initial Stock</string>
+    <string name="hint_category">Category</string>
+    <string name="hint_variant">Variant / Colour (Optional)</string>
+    <string name="btn_add_product">Add Product</string>
+    <string name="error_empty_fields">Please fill all required fields.</string>
+    <string name="product_added_success">Product added successfully!</string>
 </resources>

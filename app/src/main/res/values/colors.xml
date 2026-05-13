@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="bg_dark">#121212</color>
-    <color name="surface_dark">#1E1E1E</color>
-    <color name="surface_variant">#2C2C2C</color>
+    <color name="bg_dark">#050811</color>
+    <color name="surface_dark">#0C1222</color>
+    <color name="surface_variant">#151E33</color>
     
-    <color name="text_primary">#FFFFFF</color>
-    <color name="text_secondary">#B3B3B3</color>
-    <color name="text_tertiary">#808080</color>
+    <color name="text_primary">#E2E8F0</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_tertiary">#64748B</color>
 
-    <color name="accent_simple">#8AB4F8</color>
+    <color name="accent_simple">#4A89F3</color>
     <color name="gold_antique">#D4AF37</color>
-    <color name="nav_icon_unselected">#808080</color>
+    <color name="nav_icon_unselected">#64748B</color>
     <color name="peacock_teal">#006D77</color>
-    <color name="divider_color">#333333</color>
+    <color name="divider_color">#1E293B</color>
 
     <!-- Material 3 mapping -->
     <color name="primary">@color/accent_simple</color>
-    <color name="onPrimary">#121212</color>
-    <color name="primaryContainer">#2C2C2C</color>
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="primaryContainer">#1E293B</color>
     <color name="onPrimaryContainer">#8AB4F8</color>
 
-    <color name="secondary">#E8EAED</color>
-    <color name="onSecondary">#121212</color>
+    <color name="secondary">#94A3B8</color>
+    <color name="onSecondary">#050811</color>
 
     <color name="background">@color/bg_dark</color>
     <color name="onBackground">@color/text_primary</color>
@@ -31,7 +31,7 @@
     <color name="onSurfaceVariant">@color/text_secondary</color>
 
     <color name="outline">@color/divider_color</color>
-    <color name="outline_variant">#444444</color>
+    <color name="outline_variant">#334155</color>
 
     <!-- Stock specific colors -->
     <color name="stock_low">#F29900</color>
@@ -39,8 +39,8 @@
     <color name="stock_high">#34A853</color>
 
     <!-- Chart palette -->
-    <color name="chart_color_1">#8AB4F8</color>
+    <color name="chart_color_1">#4A89F3</color>
     <color name="chart_color_2">#34A853</color>
     <color name="chart_color_3">#F29900</color>
-    <color name="chart_color_other">#5F6368</color>
+    <color name="chart_color_other">#64748B</color>
 </resources>

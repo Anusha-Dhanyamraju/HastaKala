@@ -12,5 +12,6 @@ data class Product(
     val stockQuantity: Int,
     val category: String,
     val variant: String = "",
-    val imageResId: Int = 0
+    val imageResId: Int = 0,
+    val imageUri: String? = null
 )
